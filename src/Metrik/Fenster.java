@@ -4,14 +4,14 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Fenster extends Frame implements WindowListener{
-	static int kreisCount;
+	static int recCount;
 	private static Zeichner fZeichner;
 	
 	public Fenster() {
-		kreisCount = 0;
+		recCount = 0;
 		fZeichner = new Zeichner();
 		
-		setTitle("Metrik 1.0");
+		setTitle("Metrik 1.0.1");
 		setSize(500, 500);
 		setVisible(true);
 		
@@ -19,12 +19,12 @@ public class Fenster extends Frame implements WindowListener{
 		add(fZeichner);
 	}
 	
-	public static int getKreisCount() {
-		return kreisCount;
+	public static int getRecCount() {
+		return recCount;
 	}
 	
-	public static void setKreisCount(int k) {
-		kreisCount = k;
+	public static void setRecCount(int r) {
+		recCount = r;
 	}
 
 	public void windowActivated(WindowEvent arg0) {}

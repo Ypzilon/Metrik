@@ -14,12 +14,12 @@ public class Zeichner extends Canvas implements MouseListener{
 	}
 
 	public void paint(Graphics2D g2d) {
-		if(Fenster.getKreisCount() == 2) {
+		if(Fenster.getRecCount() == 2) {
 			g2d.clearRect(0, 0, 500, 500);
-			Fenster.setKreisCount(0);
+			Fenster.setRecCount(0);
 		}else {
-			g2d.drawOval(xKoordinate, yKoordinate, durchmesser, durchmesser);
-			Fenster.setKreisCount(Fenster.getKreisCount() +1);
+			g2d.drawRect(xKoordinate, yKoordinate, durchmesser, durchmesser);
+			Fenster.setRecCount(Fenster.getRecCount() +1);
 		}
 	}
 	
