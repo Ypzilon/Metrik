@@ -11,7 +11,7 @@ public class Fenster extends Frame implements WindowListener{
 		kreisCount = 0;
 		fZeichner = new Zeichner();
 		
-		setTitle("Metrik 1.0");
+		setTitle("Metrik 1.1.1");
 		setSize(500, 500);
 		setVisible(true);
 		
