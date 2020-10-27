@@ -11,9 +11,10 @@ public class Fenster extends Frame implements WindowListener{
 		kreisCount = 0;
 		fZeichner = new Zeichner();
 		
-		setTitle("Metrik 1.0");
+		setTitle("Metrik 1.1.0");
 		setSize(500, 500);
 		setVisible(true);
+		setMenuBar(new FensterMenuBar());
 		
 		addWindowListener(this);
 		add(fZeichner);
@@ -25,6 +26,10 @@ public class Fenster extends Frame implements WindowListener{
 	
 	public static void setKreisCount(int k) {
 		kreisCount = k;
+	}
+	
+	public static Zeichner getZeichner() {
+		return fZeichner;
 	}
 
 	public void windowActivated(WindowEvent arg0) {}
