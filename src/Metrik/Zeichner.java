@@ -26,6 +26,10 @@ public class Zeichner extends Canvas implements MouseListener{
 		}
 	}
 	
+	public void setDurchmesser(int d) {
+		durchmesser = d;
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent event) {
 		Graphics2D g2d = (Graphics2D) getGraphics();

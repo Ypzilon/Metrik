@@ -3,7 +3,7 @@ package Metrik;
 import java.awt.*;
 import java.awt.event.*;
 
-public class FensterMenuListener implements ActionListener {
+public class HintergrundListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent event) {
