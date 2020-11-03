@@ -11,7 +11,7 @@ public class Fenster extends Frame implements WindowListener{
 		kreisCount = 0;
 		fZeichner = new Zeichner();
 		
-		setTitle("Metrik 1.2");
+		setTitle("Metrik 1.2.2");
 		setSize(500, 500);
 		setVisible(true);
 		setMenuBar(new FensterMenuBar());
