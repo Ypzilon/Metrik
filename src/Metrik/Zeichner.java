@@ -8,6 +8,7 @@ public class Zeichner extends Canvas implements MouseListener{
 	private int xKoordinate, yKoordinate;
 	private int xKreis1, yKreis1;
 	private int xKreis2, yKreis2;
+	private double xRoot, yRoot;
 	
 	public Zeichner() {
 		durchmesser = 50;
@@ -30,15 +31,31 @@ public class Zeichner extends Canvas implements MouseListener{
 			xKreis2 = xKoordinate;
 			yKreis2 = yKoordinate;
 			g2d.drawString("Kreis "+Fenster.getKreisCount()+": X:"+xKoordinate+" Y:"+yKoordinate, 20, (20*Fenster.getKreisCount()));
+			g2d.drawString("Distanz: "+getDistance(), 20, (20+20*Fenster.getKreisCount()));
 			g2d.drawLine(xKreis1, yKreis1, xKreis2, yKreis2);
 		}else {
 			g2d.clearRect(0, 0, 500, 500);
 			Fenster.setKreisCount(0);
+			reset();
 		}
+		
 	}
 	
 	public void setDurchmesser(int d) {
 		durchmesser = d;
+	}
+	
+	public double getDistance() {
+		xRoot = xKreis1 - xKreis2;
+		yRoot = yKreis1 - yKreis2;
+		return Math.sqrt(Math.pow(xRoot, 2)+Math.pow(yRoot, 2))-durchmesser;
+	}
+	
+	public void reset() {
+		xKoordinate = 0;
+		yKoordinate = 0;
+		xRoot = 0;
+		yRoot = 0;
 	}
 	
 	@Override
